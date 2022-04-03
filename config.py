@@ -326,6 +326,7 @@ for i in groups:
         ]
     )
 
+main_theme_color = '#14BC85'
 # here the main background color is based on the wallpaper theme or primary color
 def init_color_final():
     return [
@@ -336,7 +337,7 @@ def init_color_final():
         ["#0F1419", "#0F1419"],  # 4 - inactive icon background color
         ["#EFEFEF", "#EFEFEF"],  # 5 - normal text color
         ["#2B3035", "#2B3035"],  # 6 - 1st type background color
-        ["#14BC85", "#14BC85"],  # 7 - 1st type text color
+        [main_theme_color, main_theme_color],  # 7 - 1st type text color
         ["#0F1419", "#0F1419"],  # 8 - 2nd type background color
         ["#EFEFEF", "#EFEFEF"],  # 9 - 2nd type text color
         ["#151515", "#151515"],  # 10 - opposite background
