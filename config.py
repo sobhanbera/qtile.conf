@@ -326,7 +326,7 @@ for i in groups:
         ]
     )
 
-main_theme_color = "#14BC85"
+main_theme_color = "#60A7DB"
 # here the main background color is based on the wallpaper theme or primary color
 def init_color_final():
     return [
