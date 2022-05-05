@@ -326,19 +326,20 @@ for i in groups:
         ]
     )
 
-main_theme_color = "#60A7DB"
+main_theme_color = "#A74D24"
+main_bg_color = "#001C2D"
 # here the main background color is based on the wallpaper theme or primary color
 def init_color_final():
     return [
-        ["#0F1419", "#0F1419"],  # 0 - main background color
+        [main_bg_color, main_bg_color],  # 0 - main background color
         ["#FFFFFF", "#FFFFFF"],  # 1 - active icon color
-        ["#0F1419", "#0F1419"],  # 2 - active icon background color
+        [main_bg_color, main_bg_color],  # 2 - active icon background color
         ["#7F7F7F", "#7F7F7F"],  # 3 - inactive icon color
-        ["#0F1419", "#0F1419"],  # 4 - inactive icon background color
+        [main_bg_color, main_bg_color],  # 4 - inactive icon background color
         ["#EFEFEF", "#EFEFEF"],  # 5 - normal text color
-        ["#2B3035", "#2B3035"],  # 6 - 1st type background color
+        ["#16222C", "#16222C"],  # 6 - 1st type background color
         [main_theme_color, main_theme_color],  # 7 - 1st type text color
-        ["#0F1419", "#0F1419"],  # 8 - 2nd type background color
+        [main_bg_color, main_bg_color],  # 8 - 2nd type background color
         ["#EFEFEF", "#EFEFEF"],  # 9 - 2nd type text color
         ["#151515", "#151515"],  # 10 - opposite background
         "#892F82",  # 11 - single color
@@ -352,7 +353,7 @@ USER_NAME = " sobhanbera |"
 currcolor = True
 marginHorizontal = 20
 marginHorizontalBottom = 600  # this value should not be more higher... BTW this value is according to my screen size
-margin = 6
+margin = 0
 
 bar_size = 26
 bar_opacity = 0.65
@@ -398,10 +399,10 @@ layouts = [
         ratio=0.5,
     ),
     layout.Bsp(**init_layout_theme("𝓫𝓼𝓹𝔀𝓷|")),
-    # layout.Matrix(**init_layout_theme("𝓶𝓪𝓽𝓻𝔁|")),
-    # layout.Floating(**init_layout_theme("𝓯𝓵𝓸𝓪𝓽|")),
+    layout.Matrix(**init_layout_theme("𝓶𝓪𝓽𝓻𝔁|")),
+    layout.Floating(**init_layout_theme("𝓯𝓵𝓸𝓪𝓽|")),
     # layout.RatioTile(**init_layout_theme("𝓻𝓪𝓽𝓲𝓸|")),
-    # layout.Max(**init_layout_theme("𝓶𝓪𝔁𝔀𝓶 |")),
+    layout.Max(**init_layout_theme("𝓶𝓪𝔁𝔀𝓶 |")),
     # layout.Zoomy(**init_layout_theme("zoom|")),
     # layout.Stack(**init_layout_theme('Stack|'))
     # layout.Slice(**init_layout_theme("slice|"))
