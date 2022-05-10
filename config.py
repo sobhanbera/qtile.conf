@@ -78,7 +78,6 @@ keys = [
     Key([mod], "m", lazy.spawn("google-chrome-stable")),
     Key([mod, "control"], "m", lazy.spawn("min")),
     Key([mod], "q", lazy.window.kill()),
-    Key([mod], "r", lazy.spawn("rofi-theme-selector")),
     Key([mod], "t", lazy.spawn("urxvt")),
     Key([mod], "v", lazy.spawn("pavucontrol")),
     Key([mod], "w", lazy.spawn("vivaldi-stable")),
@@ -104,7 +103,7 @@ keys = [
     Key(
         [mod],
         "d",
-        lazy.spawn("rofi -show run"),
+        lazy.spawn("rofi -show drun"),
     ),
     # Key(
     #    ["mod1"],
@@ -326,11 +325,13 @@ for i in groups:
         ]
     )
 
-main_theme_color = "#A74D24"
-main_bg_color = "#001C2D"
-normal_text_color = "#EFEFEF"
+main_theme_color = "#EF305C"
+main_bg_color = "#211036"
+normal_text_color = "#FFFFFF"
 
 # here the main background color is based on the wallpaper theme or primary color
+
+
 def init_color_final():
     return [
         [main_bg_color, main_bg_color],  # 0 - main background color
@@ -351,10 +352,11 @@ def init_color_final():
 
 colors = init_color_final()
 # USER_NAME = "| 𝓼𝓸𝓫𝓱𝓪𝓷𝓫𝓮𝓻𝓪 | "
-USER_NAME = " sobhanbera |"
+USER_NAME = " 𝘀𝗼𝗯𝗵𝗮𝗻 𝗯𝗲𝗿𝗮 |"
 currcolor = True
 marginHorizontal = 20
-marginHorizontalBottom = 600  # this value should not be more higher... BTW this value is according to my screen size
+# this value should not be more higher... BTW this value is according to my screen size
+marginHorizontalBottom = 600
 margin = 0
 
 bar_size = 26
@@ -383,7 +385,7 @@ layouts = [
         max_ratio=0.95,
         change_size=0.08,
         change_ratio=0.035,
-        name="𝓽𝓪𝓵𝓵|",
+        name="𝘁𝗮𝗹|",
         fontsize=20,
         ratio=0.5,
     ),
@@ -395,19 +397,19 @@ layouts = [
         max_ratio=0.95,
         change_size=0.08,
         change_ratio=0.035,
-        name="𝔀𝓲𝓭𝓮|",
+        name="𝘄𝗶𝗱|",
         fontsize=20,
         new_at_current=True,
         ratio=0.5,
     ),
-    layout.Bsp(**init_layout_theme("𝓫𝓼𝓹𝔀𝓷|")),
-    layout.Matrix(**init_layout_theme("𝓶𝓪𝓽𝓻𝔁|")),
-    layout.Floating(**init_layout_theme("𝓯𝓵𝓸𝓪𝓽|")),
-    # layout.RatioTile(**init_layout_theme("𝓻𝓪𝓽𝓲𝓸|")),
-    layout.Max(**init_layout_theme("𝓶𝓪𝔁𝔀𝓶 |")),
-    # layout.Zoomy(**init_layout_theme("zoom|")),
-    # layout.Stack(**init_layout_theme('Stack|'))
-    # layout.Slice(**init_layout_theme("slice|"))
+    layout.Matrix(**init_layout_theme("𝗺𝗮𝘁|")),
+    layout.Floating(**init_layout_theme("𝗳𝗹𝘁|")),
+    # layout.Bsp(**init_layout_theme("𝗯𝘀𝗽|")),
+    # layout.RatioTile(**init_layout_theme("𝗿𝗮𝘁|")),
+    # layout.Max(**init_layout_theme("𝗺𝗮𝘅 |")),
+    # layout.Zoomy(**init_layout_theme("𝘇𝗼𝗺|")),
+    # layout.Stack(**init_layout_theme('𝘀𝘁𝗸|'))
+    # layout.Slice(**init_layout_theme("𝘀𝗹𝗶|"))
 ]
 
 
