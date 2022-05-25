@@ -253,7 +253,6 @@ group_names = [
     "2",
     "3",
     "4",
-    "5",
     "8",
     "9",
     "0",
@@ -267,14 +266,9 @@ group_labels = [
     " ⦿ ",
     " ⦿ ",
     " ⦿ ",
-    " ⦿ ",
-    " ⦿ ",
 ]  # reduced the number of groups
 # group_labels = ["WEB", "NVIM", "TERM", "DROID", "TEST", "MUSIZ", "FILE", "GAME", "FUN", "ETC"]
 group_layouts = [
-    "monadtall",
-    "monadtall",
-    "monadtall",
     "monadtall",
     "monadtall",
     "monadtall",
@@ -325,9 +319,9 @@ for i in groups:
         ]
     )
 
-main_theme_color = "#EF305C"
-main_bg_color = "#211036"
-normal_text_color = "#FFFFFF"
+main_theme_color = "#7daea3"
+main_bg_color = "#282828"
+normal_text_color = "#EBDBB2"
 
 # here the main background color is based on the wallpaper theme or primary color
 
@@ -335,15 +329,15 @@ normal_text_color = "#FFFFFF"
 def init_color_final():
     return [
         [main_bg_color, main_bg_color],  # 0 - main background color
-        ["#FFFFFF", "#FFFFFF"],  # 1 - active icon color
+        ["#EBDBB2", "#EBDBB2"],  # 1 - active icon color
         [main_bg_color, main_bg_color],  # 2 - active icon background color
         ["#7F7F7F", "#7F7F7F"],  # 3 - inactive icon color
         [main_bg_color, main_bg_color],  # 4 - inactive icon background color
-        ["#EFEFEF", "#EFEFEF"],  # 5 - normal text color
+        ["#EBDBB2", "#EBDBB2"],  # 5 - normal text color
         [main_bg_color, main_bg_color],  # 6 - 1st type background color
         [main_theme_color, main_theme_color],  # 7 - 1st type text color
         [main_bg_color, main_bg_color],  # 8 - 2nd type background color
-        ["#EFEFEF", "#EFEFEF"],  # 9 - 2nd type text color
+        ["#EBDBB2", "#EBDBB2"],  # 9 - 2nd type text color
         ["#151515", "#151515"],  # 10 - opposite background
         "#892F82",  # 11 - single color
         "#0F1419",  # 12 - single color
@@ -385,7 +379,7 @@ layouts = [
         max_ratio=0.95,
         change_size=0.08,
         change_ratio=0.035,
-        name="𝘁𝗮𝗹|",
+        name="𝘁𝗮𝗹| ",
         fontsize=20,
         ratio=0.5,
     ),
@@ -397,13 +391,13 @@ layouts = [
         max_ratio=0.95,
         change_size=0.08,
         change_ratio=0.035,
-        name="𝘄𝗶𝗱|",
+        name="𝘄𝗶𝗱 | ",
         fontsize=20,
         new_at_current=True,
         ratio=0.5,
     ),
-    layout.Matrix(**init_layout_theme("𝗺𝗮𝘁|")),
-    layout.Floating(**init_layout_theme("𝗳𝗹𝘁|")),
+    layout.Matrix(**init_layout_theme("𝗺𝗮𝘁 | ")),
+    layout.Floating(**init_layout_theme("𝗳𝗹𝘁 | ")),
     # layout.Bsp(**init_layout_theme("𝗯𝘀𝗽|")),
     # layout.RatioTile(**init_layout_theme("𝗿𝗮𝘁|")),
     # layout.Max(**init_layout_theme("𝗺𝗮𝘅 |")),
@@ -414,10 +408,11 @@ layouts = [
 
 
 def launch_nvim():
-    # qtile.cmd_spawn("/home/sobhanbera/Documents/Softwares/scripts/launch_nvim.sh")
-    # qtile.cmd_spawn("alacritty -e zsh -c nvim")
+    # qtile.cmd_spawn(
+    # "alacritty -e /home/sobhanbera/Documents/Softwares/nvim/nvim/bin/nvim"
+    # )
     qtile.cmd_spawn(
-        "alacritty -e /home/sobhanbera/Documents/Softwares/nvim/nvim/bin/nvim"
+        "alacritty -e /home/sobhanbera/Documents/Softwares/scripts/code_runner.sh"
     )
 
 
@@ -549,14 +544,14 @@ def screenTopWidgetList():
             padding=3,
             fontsize=font_size,
         ),
-        widget.Battery(
-            update_interval=10,
-            fontsize=font_size,
-            font=default_font,
-            foreground=colors[7],
-            background=colors[6],
-            format="{percent:2.0%} {char}",
-        ),
+        # widget.Battery(
+        #     update_interval=10,
+        #     fontsize=font_size,
+        #     font=default_font,
+        #     foreground=colors[7],
+        #     background=colors[6],
+        #     format="{percent:2.0%} {char}",
+        # ),
         widget.TextBox(
             text=" ",
             foreground=colors[9],
