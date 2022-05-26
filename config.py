@@ -325,7 +325,7 @@ for i in groups:
     )
 
 main_theme_color = '#14BC85'
-main_bg_color = "#0F1419"
+main_bg_color = "#0C1E28"
 normal_text_color = "#FFFFFF"
 # here the main background color is based on the wallpaper theme or primary color
 
