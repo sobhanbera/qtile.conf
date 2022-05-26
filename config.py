@@ -105,13 +105,11 @@ keys = [
         "d",
         lazy.spawn("rofi -show drun"),
     ),
-    # Key(
-    #    ["mod1"],
-    #    "d",
-    #    lazy.spawn(
-    #        "dmenu_run -l 25 -i -nb '#191919' -nf '#0f60b6' -sb '#0f60b6' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'"
-    #    ),
-    # ),
+    Key(
+        ["mod1"],
+        "d",
+        lazy.spawn("rofi -show drun"),
+    ),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "control"], "r", lazy.restart()),
@@ -124,7 +122,8 @@ keys = [
     Key(["mod1", "control"], "c", lazy.spawn("catfish")),
     Key(["mod1", "control"], "e", lazy.spawn("arcolinux-tweak-tool")),
     Key(["mod1", "control"], "f", lazy.spawn("firefox")),
-    Key(["mod1", "control"], "g", lazy.spawn("chromium -no-default-browser-check")),
+    Key(["mod1", "control"], "g", lazy.spawn(
+        "chromium -no-default-browser-check")),
     Key(["mod1", "control"], "i", lazy.spawn("nitrogen")),
     Key(["mod1", "control"], "k", lazy.spawn("arcolinux-logout")),
     Key(["mod1", "control"], "l", lazy.spawn("arcolinux-logout")),
@@ -325,10 +324,9 @@ for i in groups:
         ]
     )
 
-main_theme_color = "#EF305C"
-main_bg_color = "#211036"
+main_theme_color = '#14BC85'
+main_bg_color = "#0C1E28"
 normal_text_color = "#FFFFFF"
-
 # here the main background color is based on the wallpaper theme or primary color
 
 
@@ -402,14 +400,14 @@ layouts = [
         new_at_current=True,
         ratio=0.5,
     ),
-    layout.Matrix(**init_layout_theme("𝗺𝗮𝘁|")),
-    layout.Floating(**init_layout_theme("𝗳𝗹𝘁|")),
-    # layout.Bsp(**init_layout_theme("𝗯𝘀𝗽|")),
-    # layout.RatioTile(**init_layout_theme("𝗿𝗮𝘁|")),
-    # layout.Max(**init_layout_theme("𝗺𝗮𝘅 |")),
-    # layout.Zoomy(**init_layout_theme("𝘇𝗼𝗺|")),
-    # layout.Stack(**init_layout_theme('𝘀𝘁𝗸|'))
-    # layout.Slice(**init_layout_theme("𝘀𝗹𝗶|"))
+    layout.Matrix(**init_layout_theme("𝗺𝗮𝘁 | ")),
+    layout.Floating(**init_layout_theme("𝗳𝗹𝘁 | ")),
+    # layout.Bsp(**init_layout_theme("𝗯𝘀𝗽 | ")),
+    # layout.RatioTile(**init_layout_theme("𝗿𝗮𝘁 | ")),
+    # layout.Max(**init_layout_theme("𝗺𝗮𝘅 | ")),
+    # layout.Zoomy(**init_layout_theme("𝘇𝗼𝗺 | ")),
+    # layout.Stack(**init_layout_theme('𝘀𝘁𝗸 | '))
+    # layout.Slice(**init_layout_theme("𝘀𝗹𝗶 | "))
 ]
 
 
