@@ -78,7 +78,6 @@ keys = [
     Key([mod], "m", lazy.spawn("google-chrome-stable")),
     Key([mod, "control"], "m", lazy.spawn("min")),
     Key([mod], "q", lazy.window.kill()),
-    Key([mod], "r", lazy.spawn("rofi-theme-selector")),
     Key([mod], "t", lazy.spawn("urxvt")),
     Key([mod], "v", lazy.spawn("pavucontrol")),
     Key([mod], "w", lazy.spawn("vivaldi-stable")),
@@ -104,15 +103,13 @@ keys = [
     Key(
         [mod],
         "d",
-        lazy.spawn("rofi -show run"),
+        lazy.spawn("rofi -show drun"),
     ),
-    # Key(
-    #    ["mod1"],
-    #    "d",
-    #    lazy.spawn(
-    #        "dmenu_run -l 25 -i -nb '#191919' -nf '#0f60b6' -sb '#0f60b6' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'"
-    #    ),
-    # ),
+    Key(
+        ["mod1"],
+        "d",
+        lazy.spawn("rofi -show drun"),
+    ),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "control"], "r", lazy.restart()),
@@ -125,7 +122,8 @@ keys = [
     Key(["mod1", "control"], "c", lazy.spawn("catfish")),
     Key(["mod1", "control"], "e", lazy.spawn("arcolinux-tweak-tool")),
     Key(["mod1", "control"], "f", lazy.spawn("firefox")),
-    Key(["mod1", "control"], "g", lazy.spawn("chromium -no-default-browser-check")),
+    Key(["mod1", "control"], "g", lazy.spawn(
+        "chromium -no-default-browser-check")),
     Key(["mod1", "control"], "i", lazy.spawn("nitrogen")),
     Key(["mod1", "control"], "k", lazy.spawn("arcolinux-logout")),
     Key(["mod1", "control"], "l", lazy.spawn("arcolinux-logout")),
@@ -327,18 +325,22 @@ for i in groups:
     )
 
 main_theme_color = '#14BC85'
+main_bg_color = "#0F1419"
+normal_text_color = "#FFFFFF"
 # here the main background color is based on the wallpaper theme or primary color
+
+
 def init_color_final():
     return [
-        ["#0F1419", "#0F1419"],  # 0 - main background color
+        [main_bg_color, main_bg_color],  # 0 - main background color
         ["#FFFFFF", "#FFFFFF"],  # 1 - active icon color
-        ["#0F1419", "#0F1419"],  # 2 - active icon background color
+        [main_bg_color, main_bg_color],  # 2 - active icon background color
         ["#7F7F7F", "#7F7F7F"],  # 3 - inactive icon color
-        ["#0F1419", "#0F1419"],  # 4 - inactive icon background color
+        [main_bg_color, main_bg_color],  # 4 - inactive icon background color
         ["#EFEFEF", "#EFEFEF"],  # 5 - normal text color
-        ["#2B3035", "#2B3035"],  # 6 - 1st type background color
+        [main_bg_color, main_bg_color],  # 6 - 1st type background color
         [main_theme_color, main_theme_color],  # 7 - 1st type text color
-        ["#0F1419", "#0F1419"],  # 8 - 2nd type background color
+        [main_bg_color, main_bg_color],  # 8 - 2nd type background color
         ["#EFEFEF", "#EFEFEF"],  # 9 - 2nd type text color
         ["#151515", "#151515"],  # 10 - opposite background
         "#892F82",  # 11 - single color
@@ -348,11 +350,12 @@ def init_color_final():
 
 colors = init_color_final()
 # USER_NAME = "| 𝓼𝓸𝓫𝓱𝓪𝓷𝓫𝓮𝓻𝓪 | "
-USER_NAME = " sobhanbera |"
+USER_NAME = " 𝘀𝗼𝗯𝗵𝗮𝗻 𝗯𝗲𝗿𝗮 |"
 currcolor = True
 marginHorizontal = 20
-marginHorizontalBottom = 600  # this value should not be more higher... BTW this value is according to my screen size
-margin = 6
+# this value should not be more higher... BTW this value is according to my screen size
+marginHorizontalBottom = 600
+margin = 0
 
 bar_size = 26
 bar_opacity = 0.65
@@ -380,7 +383,7 @@ layouts = [
         max_ratio=0.95,
         change_size=0.08,
         change_ratio=0.035,
-        name="𝓽𝓪𝓵𝓵|",
+        name="𝘁𝗮𝗹|",
         fontsize=20,
         ratio=0.5,
     ),
@@ -392,19 +395,19 @@ layouts = [
         max_ratio=0.95,
         change_size=0.08,
         change_ratio=0.035,
-        name="𝔀𝓲𝓭𝓮|",
+        name="𝘄𝗶𝗱|",
         fontsize=20,
         new_at_current=True,
         ratio=0.5,
     ),
-    layout.Bsp(**init_layout_theme("𝓫𝓼𝓹𝔀𝓷|")),
-    # layout.Matrix(**init_layout_theme("𝓶𝓪𝓽𝓻𝔁|")),
-    # layout.Floating(**init_layout_theme("𝓯𝓵𝓸𝓪𝓽|")),
-    # layout.RatioTile(**init_layout_theme("𝓻𝓪𝓽𝓲𝓸|")),
-    # layout.Max(**init_layout_theme("𝓶𝓪𝔁𝔀𝓶 |")),
-    # layout.Zoomy(**init_layout_theme("zoom|")),
-    # layout.Stack(**init_layout_theme('Stack|'))
-    # layout.Slice(**init_layout_theme("slice|"))
+    layout.Matrix(**init_layout_theme("𝗺𝗮𝘁 | ")),
+    layout.Floating(**init_layout_theme("𝗳𝗹𝘁 | ")),
+    # layout.Bsp(**init_layout_theme("𝗯𝘀𝗽 | ")),
+    # layout.RatioTile(**init_layout_theme("𝗿𝗮𝘁 | ")),
+    # layout.Max(**init_layout_theme("𝗺𝗮𝘅 | ")),
+    # layout.Zoomy(**init_layout_theme("𝘇𝗼𝗺 | ")),
+    # layout.Stack(**init_layout_theme('𝘀𝘁𝗸 | '))
+    # layout.Slice(**init_layout_theme("𝘀𝗹𝗶 | "))
 ]
 
 
